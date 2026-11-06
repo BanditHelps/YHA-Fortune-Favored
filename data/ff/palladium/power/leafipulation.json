@@ -1,0 +1,87 @@
+{
+    "name": "Leafipulation",
+    "icon": "ff:textures/icons/leafipulation.png",
+    "persistent_data": true,
+    "abilities": {
+        "leaf_throw": {
+            "type": "palladium:blast",
+            "beam_renderer": "ff:leaf",
+            "damage": 2,
+            "max_distance": 25,
+            "set_on_fire_ticks": 0,
+            "length": 1,
+            "properties": {
+                "list_index": 0,
+                "color": "lime",
+                "hidden_in_gui": false,
+                "title": {
+                    "text": "Leaf Launch"
+                },
+                "icon": "ff:textures/icons/leaf_throw.png"
+            },
+            "state": {
+                "enabling": {
+                    "type": "palladium:key_bind",
+                    "key_bind": {
+                        "type": "palladium:ability_key"
+                    },
+                    "behaviour": "activation",
+                    "time": 0,
+                    "cooldown": 12
+                }
+            }
+        },
+        "leaf_shields": {
+            "type": "palladium:guard",
+            "disable_attacking": false,
+            "guard_threshold": 999,
+            "break_damage": 1,
+            "block_angle": 360,
+            "knockback_strength": 0.3,
+            "properties": {
+                "list_index": 1,
+                "color": "lime",
+                "hidden_in_gui": false,
+                "title": {
+                    "text": "Leaf Shield"
+                },
+                "icon": "ff:textures/icons/leafs.png"
+            },
+            "state": {
+                "enabling": {
+                    "type": "palladium:key_bind",
+                    "key_bind": {
+                        "type": "palladium:ability_key"
+                    },
+                    "behaviour": "toggle",
+                    "time": 0,
+                    "cooldown": 2
+                }
+            }
+        },
+        "shield_particles": {
+            "type": "palladium:particles",
+            "emitter": [
+                "ff:torso"
+            ],
+            "particle_type": "minecraft:tinted_leaves",
+            "options": {
+                "color": 8781730
+            },
+            "properties": {
+                "hidden_in_gui": true
+            },
+            "state": {
+                "unlocking": {
+                    "type": "palladium:conditional",
+                    "conditions": [
+                        {
+                            "type": "palladium:ability_enabled",
+                            "ability": "ff:leafipulation#leaf_shields"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

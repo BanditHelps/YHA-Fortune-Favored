@@ -1,0 +1,8 @@
+{
+  "body_part": "right_arm",
+  "amount": 1,
+  "offset": [0, -7, 0],
+  "offset_random": [2.75, -4, 2.75],
+  "motion": [0, -10, 0],
+  "motion_random": [0.3, 0, 0.3]
+}

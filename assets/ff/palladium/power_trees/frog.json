@@ -1,0 +1,14 @@
+{
+    "grid_size": 50,
+    "auto_connect": true,
+    "nodes": {
+        "fall_immune": [0.0, 0.0],
+        "jump": [0.0, 0.0],
+        "tongue_grapple": [0.0, 1.0],
+        "secrete_substance": [0.5, 2.0],
+        "stomach": [-0.5, 2.0],
+        "stick_walls": [-1.0, 1.0],
+        "camouflage": [1.0, 1.0]
+    },
+    "connections": []
+}

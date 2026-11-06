@@ -1,0 +1,10 @@
+{
+    "grid_size": 50,
+    "auto_connect": true,
+    "nodes": {
+        "leaf_throw": [0.0, 1.0],
+        "leaf_shields": [-1.0, 1.0],
+        "shield_particles": [0.0, 0.0]
+    },
+    "connections": []
+}

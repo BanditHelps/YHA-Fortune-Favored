@@ -1,0 +1,8 @@
+{
+    "light_emission": 15,
+    "texture": {
+        "type": "palladium:eye_selection",
+        "color": "#ff0000"
+    },
+    "render_type": "palladium:glow"
+}
