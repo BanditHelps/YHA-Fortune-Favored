@@ -1,0 +1,10 @@
+{
+  "grid_size": 50,
+  "auto_connect": true,
+  "nodes": {
+    "info_ability": [
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "boost_rings",
+    "persistent_data": true,
+    "icon": "minecraft:crafting_table",
+    "gui_display_type": "tree",
+    "abilities": {
+        "info_ability": {
+            "type": "palladium:dummy",
+            "properties": {
+                "description": "This is an example set up power, ready for you to add stuff!",
+                "hidden_in_gui": false,
+                "hidden_in_bar": true,
+                "title": "boost_rings",
+                "icon": "minecraft:crafting_table"
+            }
+        },
+        "ring_bot": {
+            "type": "palladium:aim"
+        }
+    }
+}
