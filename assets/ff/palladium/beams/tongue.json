@@ -1,0 +1,9 @@
+{
+  "body_part": "head",
+  "offset": [0, 1, 0],
+  "renderer": {
+    "type": "palladium:flat_textured",
+    "texture": "ff:textures/beams/tongue.png",
+    "texture_size": 5
+  }
+}

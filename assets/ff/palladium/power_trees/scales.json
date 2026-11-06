@@ -1,0 +1,15 @@
+{
+    "grid_size": 50,
+    "auto_connect": true,
+    "nodes": {
+        "block": [-0.5, 2.0],
+        "scale_projectile": [1.0, 1.0],
+        "defensive_scales": [0.0, 1.0],
+        "arm_scale_dmg": [0.0, 0.0],
+        "scale_particles": [0.0, 0.0],
+        "full_body_scaled": [-1.0, 1.0],
+        "fullbody_scales_particles": [0.0, 0.0],
+        "body_scale_dmg": [0.0, 0.0]
+    },
+    "connections": []
+}

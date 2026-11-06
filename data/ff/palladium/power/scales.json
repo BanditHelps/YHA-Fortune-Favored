@@ -1,0 +1,252 @@
+{
+    "name": "Scales",
+    "icon": "ff:textures/icons/scales.png",
+    "persistent_data": true,
+    "abilities": {
+        "block": {
+            "type": "palladium:guard",
+            "disable_attacking": true,
+            "guard_threshold": 999,
+            "break_damage": 1,
+            "block_angle": 175,
+            "knockback_strength": 1,
+            "properties": {
+                "list_index": 0,
+                "color": "lime",
+                "hidden_in_gui": false,
+                "title": {
+                    "text": "Block"
+                },
+                "icon": "ff:textures/icons/scales_block.png"
+            },
+            "state": {
+                "unlocking": {
+                    "type": "palladium:conditional",
+                    "conditions": [
+                        {
+                            "type": "palladium:or",
+                            "conditions": [
+                                {
+                                    "type": "palladium:ability_enabled",
+                                    "ability": "ff:scales#full_body_scaled"
+                                },
+                                {
+                                    "type": "palladium:ability_enabled",
+                                    "ability": "ff:scales#defensive_scales"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "enabling": {
+                    "type": "palladium:key_bind",
+                    "key_bind": {
+                        "type": "palladium:ability_key"
+                    },
+                    "behaviour": "held",
+                    "time": 0,
+                    "cooldown": 2
+                }
+            }
+        },
+        "scale_projectile": {
+            "type": "palladium:blast",
+            "beam_renderer": "ff:scale",
+            "damage": 2,
+            "max_distance": 25,
+            "set_on_fire_ticks": 0,
+            "length": 0.4,
+            "properties": {
+                "list_index": 1,
+                "color": "lime",
+                "hidden_in_gui": false,
+                "title": {
+                    "text": "Projectile Scale"
+                },
+                "icon": "ff:textures/icons/launch_scale.png"
+            },
+            "state": {
+                "enabling": {
+                    "type": "palladium:key_bind",
+                    "key_bind": {
+                        "type": "palladium:ability_key"
+                    },
+                    "behaviour": "activation",
+                    "time": 0,
+                    "cooldown": 12
+                }
+            }
+        },
+        "defensive_scales": {
+            "type": "palladium:attribute_modifier",
+            "modifiers": {
+                "attribute": "minecraft:armor",
+                "amount": 8,
+                "operation": "add_value"
+            },
+            "properties": {
+                "list_index": 2,
+                "color": "lime",
+                "hidden_in_gui": false,
+                "title": {
+                    "text": "Scaled Arms"
+                },
+                "icon": "ff:textures/icons/scales_armor.png"
+            },
+            "state": {
+                "unlocking": {
+                    "type": "palladium:conditional",
+                    "conditions": {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:ability_enabled",
+                                "ability": "ff:scales#full_body_scaled"
+                            }
+                        ]
+                    }
+                },
+                "enabling": {
+                    "type": "palladium:key_bind",
+                    "key_bind": {
+                        "type": "palladium:ability_key"
+                    },
+                    "behaviour": "toggle",
+                    "time": 0,
+                    "cooldown": 5
+                }
+            }
+        },
+        "arm_scale_dmg": {
+            "type": "palladium:attribute_modifier",
+            "modifiers": {
+                "attribute": "minecraft:attack_damage",
+                "amount": 1,
+                "operation": "add_value"
+            },
+            "particle_type": "minecraft:happy_villager",
+            "properties": {
+                "hidden_in_gui": true
+            },
+            "state": {
+                "unlocking": {
+                    "type": "palladium:conditional",
+                    "conditions": [
+                        {
+                            "type": "palladium:ability_enabled",
+                            "ability": "ff:scales#defensive_scales"
+                        }
+                    ]
+                }
+            }
+        },
+        "scale_particles": {
+            "type": "palladium:particles",
+            "emitter": [
+                "ff:right_arm",
+                "ff:left_arm"
+            ],
+            "particle_type": "minecraft:happy_villager",
+            "properties": {
+                "hidden_in_gui": true
+            },
+            "state": {
+                "unlocking": {
+                    "type": "palladium:conditional",
+                    "conditions": [
+                        {
+                            "type": "palladium:ability_enabled",
+                            "ability": "ff:scales#defensive_scales"
+                        }
+                    ]
+                }
+            }
+        },
+        "full_body_scaled": {
+            "type": "palladium:attribute_modifier",
+            "modifiers": {
+                "attribute": "minecraft:armor",
+                "amount": 16,
+                "operation": "add_value"
+            },
+            "properties": {
+                "list_index": 3,
+                "color": "lime",
+                "hidden_in_gui": false,
+                "title": {
+                    "text": "Scaled Body"
+                },
+                "icon": "ff:textures/icons/scales_armor_full.png"
+            },
+            "state": {
+                "unlocking": {
+                    "type": "palladium:conditional",
+                    "conditions": [
+                        {
+                            "type": "palladium:not",
+                            "conditions": [
+                                {
+                                    "type": "palladium:ability_enabled",
+                                    "ability": "ff:scales#defensive_scales"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "enabling": {
+                    "type": "palladium:key_bind",
+                    "key_bind": {
+                        "type": "palladium:ability_key"
+                    },
+                    "behaviour": "toggle",
+                    "time": 0,
+                    "cooldown": 5
+                }
+            }
+        },
+        "fullbody_scales_particles": {
+            "type": "palladium:particles",
+            "emitter": [
+                "ff:torso"
+            ],
+            "particle_type": "minecraft:happy_villager",
+            "properties": {
+                "hidden_in_gui": true
+            },
+            "state": {
+                "unlocking": {
+                    "type": "palladium:conditional",
+                    "conditions": [
+                        {
+                            "type": "palladium:ability_enabled",
+                            "ability": "ff:scales#full_body_scaled"
+                        }
+                    ]
+                }
+            }
+        },
+        "body_scale_dmg": {
+            "type": "palladium:attribute_modifier",
+            "modifiers": {
+                "attribute": "minecraft:attack_damage",
+                "amount": 3,
+                "operation": "add_value"
+            },
+            "particle_type": "minecraft:happy_villager",
+            "properties": {
+                "hidden_in_gui": true
+            },
+            "state": {
+                "unlocking": {
+                    "type": "palladium:conditional",
+                    "conditions": [
+                        {
+                            "type": "palladium:ability_enabled",
+                            "ability": "ff:scales#full_body_scaled"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "name": "Steel",
+    "icon": "ff:textures/icons/steel.png",
+    "persistent_data": true,
+    "abilities": {
+        "1": {
+            "type": "palladium:dummy",
+            "properties": {
+                "list_index": 0,
+                "color": "white",
+                "hidden_in_gui": false,
+                "title": {
+                    "text": ""
+                },
+                "icon": "ff:textures/icons/.png"
+            },
+            "state": {
+                "enabling": {
+                    "type": "palladium:key_bind",
+                    "key_bind": {
+                        "type": "palladium:ability_key"
+                    },
+                    "behaviour": "activation",
+                    "time": 0,
+                    "cooldown": 1
+                }
+            }
+        },
+        "2": {
+            "type": "palladium:dummy",
+            "properties": {
+                "list_index": 1,
+                "color": "white",
+                "hidden_in_gui": false,
+                "title": {
+                    "text": ""
+                },
+                "icon": "ff:textures/icons/.png"
+            },
+            "state": {
+                "enabling": {
+                    "type": "palladium:key_bind",
+                    "key_bind": {
+                        "type": "palladium:ability_key"
+                    },
+                    "behaviour": "activation",
+                    "time": 0,
+                    "cooldown": 1
+                }
+            }
+        }
+    }
+}

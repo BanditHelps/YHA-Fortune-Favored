@@ -1,0 +1,9 @@
+{
+  "body_part": "right_arm",
+  "offset": [0, -11, 0],
+  "renderer": {
+    "type": "palladium:flat_textured",
+    "texture": "ff:textures/beams/leaf.png",
+    "texture_size": 2
+  }
+}
