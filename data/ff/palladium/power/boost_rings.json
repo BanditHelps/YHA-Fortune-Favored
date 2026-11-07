@@ -7,15 +7,51 @@
         "info_ability": {
             "type": "palladium:dummy",
             "properties": {
-                "description": "This is an example set up power, ready for you to add stuff!",
+                "description": "Summon rings under your feet used for acceleration",
                 "hidden_in_gui": false,
                 "hidden_in_bar": true,
-                "title": "boost_rings",
+                "title": "boost rings",
                 "icon": "minecraft:crafting_table"
             }
         },
-        "ring_bot": {
-            "type": "palladium:aim"
+        "ring_boost": {
+            "type": "palladium:slowfall",
+            "properties": {
+                "hidden_in_bar": false,
+                "icon": "minecraft:paper",
+                "title": "Ring Boost",
+                "description": "Charge a ring underfoot then release to accelerate"
+            }
+        },
+        "strafe": {
+            "type": "palladium:dummy",
+            "properties": {
+                "title": "Strafe",
+                "icon": "minecraft:paper",
+                "hidden_in_gui": false,
+                "hidden_in_bar": true,
+                "description": "Summon rings on your arms to boost yourself to the side while midair"
+            }
+        },
+        "boost_punch": {
+            "type": "palladium:dummy",
+            "properties": {
+                "title": "Boost punch",
+                "icon": "minecraft:paper",
+                "hidden_in_gui": false,
+                "hidden_in_bar": true,
+                "description": "Cover your arm in rains to deliver a super fast punch that deals a lot of knockback"
+            }
+        },
+        "particle_accelerator": {
+            "type": "palladium:dummy",
+            "properties": {
+                "title": "Particle accelerator",
+                "icon": "minecraft:paper",
+                "hidden_in_gui": false,
+                "hidden_in_bar": true,
+                "description": "Use your rings to pass a throwable item through and launch it with great speed"
+            }
         }
     }
 }
